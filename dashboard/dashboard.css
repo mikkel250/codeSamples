@@ -1,20 +1,7 @@
 .qulContainer {
   padding-top: 2%;
 }
-/* this sets the rows to equal height but doesn't seem to be working */
 
-/* .row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-}
-.row > [class*='col-'] .cardBody {
-  display: flex;
- flex-direction: column; 
-} */
-/* maybe it would if I removed all of the extra divs inside the columns? */
 .thumbnail {
   text-align: center;
   border-radius: 15px;
@@ -75,7 +62,6 @@
 
 .subheadingRight {
   color: #91e18f;
-  /* text-shadow: 1px 0px 0px white, 0px 1px 0px white, -1px 0px 0px white, 0px -1px 0px white; */
   font-weight: bold;
 }
 .subheadingRight .fa.fa-circle {
@@ -88,11 +74,6 @@
   color: #4a93f5;
   text-shadow: 1px 0px 0px white, 0px 1px 0px white, -1px 0px 0px white, 0px -1px 0px white;
   font-weight: bold;
-}
-.salesPoints,
-.commissions {
-  /* display: grid;
-  grid-template-columns: 30% 70%; */
 }
 .left {
   display: grid;
@@ -134,28 +115,23 @@
   color: #518781;
 }
 .commissionsChart .ct-series-a .ct-slice-donut-solid {
-  /* fill of the pie slieces YELLOW ORANGE GREEN*/
   fill: #25baa9;
 }
 .commissionsChart .ct-series-b .ct-slice-donut-solid {
-  /* fill of the pie slieces YELLOW ORANGE GREEN*/
+
   fill: #40a095;
 }
 .commissionsChart .ct-series-c .ct-slice-donut-solid {
-  /* fill of the pie slieces YELLOW ORANGE GREEN*/
   fill: #518781;
 }
 .salesPoints .ct-series-a .ct-slice-donut-solid {
-  /* fill of the pie slieces USE BLUE/GREEN*/
-  fill: #4a93f5;
+    fill: #4a93f5;
 }
 .salesPoints .ct-series-b .ct-slice-donut-solid {
-  /* fill of the pie slieces USE BLUE/GREEN*/
-  fill: #6e9edc;
+    fill: #6e9edc;
 }
 .salesPoints .ct-series-c .ct-slice-donut-solid {
-  /* fill of the pie slieces USE BLUE/GREEN*/
-  fill: #88a1c2;
+    fill: #88a1c2;
 }
 .qualifiedPointsGoal {
   font-size: x-large;
@@ -202,17 +178,6 @@
 }
 .influenceTiers {
   font-weight: bold;
-}
-.directInfluenceLegend,
-.teamInfluenceLegend {
-  /* grid-row: 1 / span 1;
-  margin-top: -20px; encroach on the space of the chart bc of its padding */
-}
-.directInfluenceLegend {
-  /* grid-column: 2 / span 1; */
-}
-.teamInfluenceLegend {
-  /* grid-column: 2 / span 1; */
 }
 .directInfluenceLegend .free {
   color: #91e18f;
@@ -269,7 +234,6 @@ span.ui-paging-info,
   display: none !important;
 }
 .leaderboard .cardBody {
-  /* The resizing here is acting weird, I think because the widget is inserting two new bootstrap column elements into the body. Setting individually seems to be the only thing that works here. */
   min-height: 65vh;
   margin-top: -5vh;
 }
@@ -380,11 +344,6 @@ right: 1thm 0n !important;
 
   .progress {
     margin-bottom: 10px;
-  }
-  .currentBalanceChart,
-  .commissionsChart {
-    /* setting this is required to get the pie to size correctly */
-    /* height: 16vh;  */
   }
   .xflow-widget {
     margin-top: -10%;

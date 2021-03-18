@@ -32,10 +32,49 @@ After digging into the docs and experimenting with the Date object, I discovered
 ### How I feel it represents my abilities
 - Think and work through a challenge.
 - Consider and test edge cases.
-- Worked with the tools available to come up with a creative solution to the challenge without resorting to adding any libraries.
-- Came up with a creative solution to the challenge independantly using the docs and testing solutions. 
+- Worked with the tools available to independantly come up with a creative solution to the challenge using the docs, testing solutions, and without relying on libraries. 
 - Perseverance. Keep iterating until arriving at a clean, concise solution.
 
 You can see a working example on a sandbox store at https://kul-sandbox.myshopify.com/
+
+
+## Dashboard
+### The Task
+Create a responsive dashboard in collaboration with various stakeholders and a vendor, using their platform, that would show all of the relevant account information to members of the rewards program when they log into the system. The data should be shown using charts wherever visualizing the data that way makes sense.
+
+### Considerations
+- Vendor platform was new, and needed to be learned. To be more accurate, it is a mix of familiar and new syntax: the file itself is HTML, but it has special tags that can be used to extend functionality, sort of a hybrid between HTML, JSX, and a templating language. For example, conditionals can be added directly to the HTML using `<IF><ELSE></IF>` tags (line 42), and variables can be pulled from the backend using the `~variable~` format (lines 6-32).
+- Deploying to vendor platform new
+- Working with charts new to me.
+
+
+### Solution
+- Worked closely with vendor by pair programming during the early stages to learn how to use the platform, with code reviews at the end of the process to ensure it has been implemented correctly. 
+
+
+### Why I'm proud of it
+This page went through a number of iterations based on feedback from the various stakeholders but I believe the final result turned out to be visually pleasing, met the requirements, with clean and concise code.
+While not all charts were used on the finished page, left them in the JS file so the various charts used in the page creation process are represented.
+
+### How I feel it represents my abilities
+Show adaptability and ability to quickly learn a new platform
+used the docs and figured out how the charts work, successfully incorporated them into the platform
+ability to collaborate with multiple stakeholder, handle changing requirements, and deliver working final product
+
+
+## Rewards
+### The Task
+
+
+### Considerations
+
+
+### Solution
+
+
+### Why I'm proud of it
+
+
+### How I feel it represents my abilities
 
 
