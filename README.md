@@ -43,23 +43,24 @@ You can see a working example on a sandbox store at https://kul-sandbox.myshopif
 Create a responsive dashboard in collaboration with various stakeholders and a vendor, using their platform, that would show all of the relevant account information to members of the rewards program when they log into the system. The data should be shown using charts wherever visualizing the data that way makes sense.
 
 ### Considerations
-- Vendor platform was new, and needed to be learned. To be more accurate, it is a mix of familiar and new syntax: the file itself is HTML, but it has special tags that can be used to extend functionality, sort of a hybrid between HTML, JSX, and a templating language. For example, conditionals can be added directly to the HTML using `<IF><ELSE></IF>` tags (line 42), and variables can be pulled from the backend using the `~variable~` format (lines 6-32).
-- Deploying to vendor platform new
-- Working with charts new to me.
-
+- Vendor platform required learning new technology/syntax. To be more accurate, it's a mix of familiar and new syntax: the file itself is HTML, but it has tags that can be used to extend functionality, sort of a hybrid between HTML, JSX, and a templating language. For example, conditionals can be added directly to the HTML using `<IF><ELSE></IF>` tags (line 42), and variables can be pulled from the backend using the `~variable_name~` format (lines 6-32).
+- Deploying to vendor platform was a hybrid of traditional FTP upload to development server, manually intiating a pull from the staging server, and then initiating deployment to staging and then production, which required learning a new workflow.
+- Charts were new technology to me. 
+- Requirements for this page would change frequently. 
 
 ### Solution
 - Worked closely with vendor by pair programming during the early stages to learn how to use the platform, with code reviews at the end of the process to ensure it has been implemented correctly. 
-
+- Worked closely with vendor to ensure that correct workflow was followed to deploy to their platform.
+- Researched chart libraries, read the docs, and experimented to learn how they work.
+- Rather than creating pixel perfect, finished pages every time, I would prototype each iteration and meet with stakeholders to view and discuss before arriving on the final UI, design, and functionality. 
 
 ### Why I'm proud of it
-This page went through a number of iterations based on feedback from the various stakeholders but I believe the final result turned out to be visually pleasing, met the requirements, with clean and concise code.
-While not all charts were used on the finished page, left them in the JS file so the various charts used in the page creation process are represented.
+- Delivered working final product with which everyone was happy, that met the requirements.
 
 ### How I feel it represents my abilities
-Show adaptability and ability to quickly learn a new platform
-used the docs and figured out how the charts work, successfully incorporated them into the platform
-ability to collaborate with multiple stakeholder, handle changing requirements, and deliver working final product
+- End product is a result of ability to quickly learn and implement new technology, and work with multiple stakeholders with fluid requirements.
+- While the code itself isn't all that technically impressive, the process to create this page is a demonstration of soft skills: collaboration, communication, and adaptability.
+
 
 
 ## Rewards
