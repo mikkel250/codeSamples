@@ -1,0 +1,261 @@
+<INCLUDE user/inc/inc.header.html>
+  <!--  MAIN START -->
+
+  <script>
+    // For "your influence" chart #directInfluenceChart
+    var freeUser = ~userType_2_total~;
+    var activeUser = ~userType_3_total~;
+    var influencer = ~userType_4_total~;
+    var qualifiedInfluencer = ~userType_3_total~;
+
+    var directFreeUser = ~direct_userType_2_count~;
+    var directActiveUser = ~direct_userType_3_count~;
+    var directInfluencer = ~direct_userType_4_count~;
+    var directQualifiedInfluencer = ~direct_userType_3_count~;
+
+    // for #gaugeChart
+    var dspPlusIsp = ~dsp~ + ~isp~;
+
+    // for donut
+    var allSp = ~dsp~ + ~isp~ + ~osp~;
+
+    // For HALF Donut (CHARTIST) .salesPointsChart
+    var totalCommissions = ~dsc~ + ~isc~ + ~osc~;
+    var dscPercent = (~dsc~ / totalCommissions) * 100;
+    var iscPercent = (~isc~ / totalCommissions) * 100;
+    var oscPercent = (~osc~ / totalCommissions) * 100;
+
+    // For HALF Donut (CHARTIST) .commissionsChart
+    var totalCommissions = ~dsp~ + ~isp~ + ~osp~;
+    var dspPercent = (~dsp~ / totalCommissions) * 100;
+    var ispPercent = (~isp~ / totalCommissions) * 100;
+    var ospPercent = (~osp~ / totalCommissions) * 100;
+  </script>
+
+  <div class="qulContainer container">
+    <div class="row flexbox firstGroup">
+      <div class="col">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3 class="cardTitle">MEMBERSHIP STATUS</h3>
+            <div class="cardBody">
+              <IF mt_id_2>FREE USER</IF>
+              <IF mt_id_3>ACTIVE CUSTOMER</IF>
+              <IF mt_id_4>INFLUENCER</IF>
+              <IF mt_id_5>Q INFLUENCER</IF>
+              <IF has_invite=1><a href="/user/account/upgrade"><i class="blink_me fas fa-chevron-double-up"></i></a>
+              </IF>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3 class="cardTitle">VIP STATUS</h3>
+            <div class="cardBody">
+              <IF vip_type=1>SILVER</IF>
+              <IF vip_type=2>GOLD</IF>
+              <IF vip_type=3>PLATINUM</IF>
+              <IF vip_type=4>DIAMOND</IF>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3 class="cardTitle">QÚL CREDITS (YTD)</h3>
+            <div class="cardBody">~ytd_cred~</div>
+          </div>
+        </div>
+      </div>
+      <IF is_participant>
+        <div class="col">
+          <div class="thumbnail">
+            <div class="caption">
+              <h3 class="cardTitle normalText">COMMISSIONS (YTD)</h3>
+              <div class="cardBody">$~ytd_comm~</div>
+            </div>
+          </div>
+        </div>
+        <ELSE>
+          <div class="col">
+            <div class="thumbnail">
+              <div class="caption">
+                <h3 class="cardTitle normalText">QÚL CREDITS (BALANCE)</h3>
+                <div class="cardBody">~currency_4_balance~</div>
+              </div>
+            </div>
+          </div>
+      </IF>
+    </div>
+    
+    <div class="row flexbox secondGroup">
+      <div class="col currentBalancePie">
+        <div class="thumbnail qualifiedPointsTracker">
+          <div class="caption">
+            <h3 class="cardTitle normalText">CURRENT BALANCE</h3>
+            <!-- PIE -->
+            <div class="cardBody">
+              <IF is_participant>
+                <div class="currentBalanceChart" id="currentBalanceChart"></div>
+                <div class="balanceText">
+                  <div class="balanceLeft top">QC</div>
+                  <div class="balanceRight top">USD</div>
+                  <div class="balanceLeft bottom">
+                    ~currency_4_balance~
+                  </div>
+                  <div class="balanceRight bottom">
+                    $~currency_1_balance~
+                  </div>
+                </div>
+                <ELSE>
+                  <div class="currentBalanceQc">
+                    ~currency_4_balance~ QC
+                  </div>
+              </IF>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <IF is_participant>
+        <div class="col salesGrid">
+          <div class="thumbnail">
+            <div class="caption">
+              <div class="cardBody salesTable">
+                <div class="col1 row1"></div>
+                <div class="col2 row1">POINTS</div>
+                <IF is_participant>
+                  <div class="col3 row1">COMMISSIONS</div>
+                </IF>
+                <div class="col1 row2">DIRECT SALES</div>
+                <div class="col1 row3">INDIRECT SALES</div>
+                <IF mt_id_5>
+                  <div class="col1 row4">OVERRIDE SALES</div>
+                </IF>
+                <div class="col2 row2">~dsp~</div>
+                <div class="col2 row3">~isp~</div>
+                <IF mt_id_5>
+                  <div class="col2 row4">~osp~</div>
+                </IF>
+                <IF is_participant>
+                  <div class="col3 row2">$~dsc~</div>
+                  <div class="col3 row3">$~isc~</div>
+                  <IF mt_id_5>
+                    <div class="col3 row4">$~osc~</div>
+                  </IF>
+                </IF>
+              </div>
+            </div>
+          </div>
+        </div>
+      </IF>
+      
+      <div class="col qualifiedPointsCard">
+        <div class="thumbnail qaulifiedPointsGauge">
+          <div class="caption">
+            <h3 class="cardTitle">
+              <IF is_participant>QUALIFIED POINTS<ELSE>ROAD TO INFLUENCER</IF>
+            </h3>
+            <!-- SPEEDO GAUGE -->
+            <div class="cardBody">
+              <div class="qualifiedPoints speedoGauge" id="qualifiedPointsContainer">
+                <canvas <IF is_participant> id="qualifiedPointsChart" <ELSE>id="roadToChart"</IF> ></canvas>
+              </div>
+              <IF is_participant>
+                <div class="qualifiedPointsGoal">Goal: 5000</div>
+                <div class="dspPlusIsp"></div>
+                <ELSE>
+                  <div class="roadTo">Goal: 3<IF has_invite=1><a href="/user/account/upgrade"><i
+                           class="blink_me fas fa-chevron-double-up" style="padding-left: 20px;"></i></a></IF>
+                  </div>
+              </IF>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row flexbox thirdGroup">
+      <IF is_participant>
+        <div class="col currentContest">
+          <div class="thumbnail leaderboard">
+            <div class="caption">
+              <h3 class="cardTitle">CURRENT CONTEST LEADERBOARD</h3>
+              <div class="cardBody">
+                <div class="xflow-widget" id="reports_52" onclick="$XFlow.widget.parse(this)" data-status="active"
+                     data-menu="report" data-action="build" data-iframe-resize="0"
+                     data-post="report=55&vars_submitted=1&start_date=2021-02-01&end_date=2021-02-28"></div>
+                <marquee class="contestDetails" behavior="scroll" direction="left"><a href="/user/cms/view/mb_5">CLICK HERE! CURRENT CONTEST: </a></marquee>
+              </div>
+            </div>
+          </div>
+        </div>
+      </IF>
+
+      <div class="col yourInfluenceBar">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3 class="cardTitle">YOUR INFLUENCE</h3>
+            <div class="cardBody">
+              <div class="influenceChartWrapper">
+                <div id="directInfluenceChart"></div>
+              </div>
+              <div class="yourInfluence">
+                <div class="influenceTiers">
+                  <h4>User Type</h4>
+                  <p class="free">Free User</p>
+                  <p class="active">Active User</p>
+                  <p class="influencer">Influencer</p>
+                  <p class="qualifiedInfluencer">Qualified Influencer</p>
+                </div>
+                <div class="directInfluenceLegend">
+                  <h4>Direct</h4>
+                  <p class="free"><i class="fa fa-circle" aria-hidden="true"></i><span>~direct_userType_2_count~</span></p>
+                  <p class="active"><i class="fa fa-circle"
+                       aria-hidden="true"></i><span>~direct_userType_3_count~</span>
+                  </p>
+                  <p class="influencer"><i class="fa fa-circle"
+                       aria-hidden="true"></i><span>~direct_userType_4_count~</span></p>
+                  <p class="qualifiedInfluencer"><i class="fa fa-circle"
+                       aria-hidden="true"></i><span>~direct_userType_5_count~</span></p>
+                </div>
+                <div class="teamInfluenceLegend">
+                  <h4>Team</h4>
+                  <p class="free"><i class="fa fa-circle" aria-hidden="true"></i><span>~userType_2_total~</span></p>
+                  <p class="active"><i class="fa fa-circle" aria-hidden="true"></i><span>~userType_3_total~</span></p>
+                  <p class="influencer"><i class="fa fa-circle" aria-hidden="true"></i><span>~userType_4_total~</span></p>
+                  <p class="qualifiedInfluencer"><i class="fa fa-circle"
+                       aria-hidden="true"></i><span>~userType_5_total~</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <IF is_participant>
+        <div class="col pointsBreakdownDonut">
+          <div class="thumbnail pointsBreakdown">
+            <div class="caption">
+              <h3 class="cardTitle">POINTS BREAKDOWN</h3>
+              <div class="cardBody">
+                <span class="subheadingLeft" style="padding-right: 40px;"><i class="fa fa-circle"
+                     aria-hidden="true"></i>
+                  ~isp~ ISP</span><span class="subheadingRight"><i class="fa fa-circle" aria-hidden="true"></i>
+                  ~dsp~ DSP</span>
+                <div id="donutChart"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </IF>
+    </div>
+  </div>
+
+  <script src="js/chartist.min.js"></script>
+  <script src="js/gauge.min.js"></script>
+  <INCLUDE user/inc/inc.dashboard.js.html>
+  <INCLUDE user/inc/inc.footer.html>

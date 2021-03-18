@@ -1,0 +1,638 @@
+@font-face {
+  font-family: "theCoansist";
+  src: url("the-coansist-regular-webfont.woff2") format("woff2"),
+    url("the-coansist-regular-webfont.woff") format("woff");
+}
+body,
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}
+/* removes scrollbar but keeps functionality */
+body::-webkit-scrollbar {
+  display: none;
+}
+.rewardsContainer {
+  font-size: 100%;
+  font-family: "Josefin Sans", Lato, "Open Sans";
+}
+.shop-button {
+  margin: auto;
+  padding: 10px;
+  position: fixed;
+  bottom: 1vh;
+  right: 15px;
+  z-index: 99;
+}
+.buynow {
+  font-family: "Josefin Sans";
+  color: #fff !important;
+  font-size: 20px;
+  background: rgb(65, 105, 91);
+  padding: 14px 20px 10px 20px;
+  text-decoration: none;
+}
+.buynow:hover {
+  background: #69ca98;
+  text-decoration: none;
+}
+.p--copy {
+  padding: 3px 0 22px;
+}
+.p--credits {
+  font-size: 0.8em;
+  font-weight: 700;
+}
+.a--no-weight {
+  font-weight: 300;
+}
+.tenDayContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  position: relative;
+  max-width: 100%;
+}
+section {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+section .content {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border-radius: 3px;
+  padding: 15px 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+section .heading {
+  text-align: center;
+  margin-bottom: auto;
+  margin-top: 3vh;
+  color: white;
+  line-height: 0.8;
+  text-shadow: none;
+}
+section .topHeading {
+  font-family: "emily-austin";
+  font-size: 8em;
+  text-transform: lowercase;
+  font-weight: 100;
+  color: #ffffff;
+}
+.subHeading {
+  font-family: "josefin-sans";
+  font-size: 2em;
+  font-weight: 300;
+}
+.heavyBold {
+  font-weight: 900 !important;
+}
+.parallax--container {
+  position: absolute;
+  clip: rect(0, auto, auto, 0);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+.parallax {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.parallax--bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.container--big {
+  height: 100vh;
+}
+.container--small {
+  height: 30vh;
+}
+.container--instructions {
+  height: min-content;
+  color: #0c281f;
+}
+.container--hero {
+  height: 90vh;
+}
+.page .main-container .main-wrapper {
+  padding-bottom: 0;
+}
+.space-above {
+  padding-top: 20px;
+}
+.chapter {
+  border-bottom: 4px double rgb(114, 206, 155);
+  color: rgb(114, 206, 155);
+  text-align: center;
+  font-size: 2.7rem;
+  font-weight: 100;
+  margin: 5% 0;
+  width: 85vw;
+}
+.intro .chapter {
+  font-size: 2.5rem;
+}
+.divider {
+  display: none;
+}
+.bgHero {
+  background-image: url("pages-QulRewardsMobile-bg-hero-1024w.jpg");
+}
+.bgIntro {
+  background-image: url("pages-QulRewardsDesktop-2-bg-2560w.jpg");
+}
+.bgDayOne {
+  background-image: url("pages-QulRewardsDesktop-3-bg-2560w.jpg");
+}
+.bgDayTwo {
+  background-image: url("pages-QulRewardsMobile-4-bg-1024w.jpg");
+}
+.bgDayThree {
+  background-image: url("pages-QulRewardsDesktop-6-bg-2560w.jpg");
+}
+.bgDayFour {
+  background-image: url("pages-QulRewardsMobile-bg-5-1024w.jpg");
+}
+.medGreen {
+  color: #408078;
+}
+.socialIcons {
+  position: absolute;
+  right: 5px;
+  max-width: 30vw;
+  margin-top: 7vh;
+  color: white;
+}
+.socialIcon {
+  height: 5vh;
+  width: 40%;
+  color: white;
+}
+.socialText {
+  font-size: 1.2rem;
+}
+.social {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.number {
+  padding: 0 5%;
+}
+.desktop-far-right .title,
+.number {
+  font-size: 2.4rem;
+}
+.item-a,
+.item-b {
+  padding-left: 20%;
+  margin-bottom: 0;
+}
+.medAqua {
+  color: #69ca98;
+}
+.copy {
+  font-family: futura-pt;
+}
+.centeredList {
+  padding: 5% 0 0 15%;
+}
+.roundedBox {
+  border-radius: 10px;
+  background-color: rgb(207, 224, 216);
+  margin: 5% auto;
+  padding: 5%;
+}
+.roundedAquaOutline {
+  border-radius: 8px;
+  border: 2px solid rgb(114, 206, 155);
+  margin: 5% auto;
+  display: inline-block;
+  padding: 2%;
+}
+.disclaimerText {
+  font-size: 75%;
+}
+.centeredText {
+  text-align: center;
+}
+.dayTwo .desktop-far-right .medAqua {
+  font-size: 125%;
+}
+.bolded {
+  font-weight: 500;
+}
+.dayThree.container--instructions {
+  padding-bottom: 3%;
+}
+.aquaBackground {
+  background-color: #69ca98;
+  color: white;
+  font-size: 120%;
+  width: 100vw;
+  font-family: "Josefin Sans";
+  margin-top: 3%;
+  font-weight: 300;
+  text-align: center;
+}
+.blackText {
+  color: black !important;
+}
+.doubleSizeText {
+  font-size: 1em;
+}
+.bgPostscript {
+  width: 100%;
+  height: auto;
+}
+.intro.container--instructions,
+.dayOne.container--instructions,
+.dayTwo.container--instructions,
+.dayThree .copy,
+.dayFour.container--instructions,
+.dayFive .copy {
+  padding: 0 5% 5% 5%;
+}
+.dayFive .aquaBackground {
+  padding: 5% 10%;
+}
+.dayOne .desktop-left {
+  padding: 0 0 10% 3%;
+}
+.dayTwo .desktop-left,
+.dayFour .desktop-left {
+  padding-bottom: 10%;
+}
+.dayOne .rewardsRow {
+  margin-bottom: 5%;
+}
+.title,
+.dayTwo .title {
+  font-size: 140%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.dayFour .copy .title {
+  font-size: 93%;
+}
+.dayTwo .centeredText .disclaimerText {
+  padding: 0 15%;
+  font-size: 85%;
+}
+.dayTwo .smallText,
+.dayTwo .qpons {
+  text-align: center;
+}
+.aquaDivider {
+  border-top: 1px solid #69ca98;
+  max-width: 75%;
+  margin: 20px auto;
+}
+.dayThree .title {
+  font-size: 135%;
+}
+.dayThree .copy {
+  text-align: center;
+  font-size: 77%;
+}
+.dayThree p {
+  margin-bottom: 5px;
+}
+.dayThree .personalSalesEg {
+  margin-bottom: 2%;
+  margin-top: 5%;
+}
+.dayFour .smallText {
+  font-size: 90%;
+}
+.dayFour .desktop-left,
+.dayFour .desktop-far-right,
+.wholesaleSection,
+.dayFive .copy {
+  text-align: center;
+}
+.dayFour .desktop-far-right {
+  border-top: 1px solid black;
+  padding-top: 5%;
+}
+.wholesaleSection p.descriptive,
+.dayFive .descriptive {
+  font-size: 80%;
+  margin-bottom: 2px;
+}
+.dayFive .descriptive {
+  margin-bottom: 2px;
+}
+.responsive-iframe {
+  width: 85vw;
+  height: 50vw;
+  margin-bottom: 5%;
+}
+@media screen and (min-width: 768px) {
+  .rewardsContainer,
+  .chapter,
+  .intro .chapter {
+    font-size: 160%;
+  }
+  .socialIcon {
+    width: 25%;
+  }
+  .socialText {
+    font-size: 2rem;
+  }
+  .buynow {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-aspect-ratio: 4/3), (min-width: 1366px) and (max-aspect-ratio: 4/3) {
+  .bgHero {
+    background-image: url("pages-QulRewardsDesktop-1-tabletLandscape.jpg");
+  }
+}
+@media screen and (min-width: 1024px) {
+  .bgHero {
+    background-image: url("pages-QulRewardsDesktop-1-2560w.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .parallax__container .parallax.bgHero {
+    background-size: contain;
+  }
+  .responsive-iframe {
+    width: 65vw;
+    height: 35vw;
+    margin-bottom: 5%;
+  }
+  .mobileOnly {
+    display: none;
+  }
+  .dayFour .desktop-far-right {
+    border-top: none;
+    padding-top: 0;
+  }
+  .leftAligned {
+    text-align: left;
+  }
+  .aquaDivider {
+    display: none;
+  }
+  .qpons .disclaimerText {
+    font-size: 100%;
+    text-align: left;
+  }
+  .dayOne.container--instructions,
+  .dayTwo.container--instructions,
+  .dayThree .copy,
+  .dayFour.container--instructions,
+  .dayFive .copy {
+    padding: 0 1% 1% 1%;
+  }
+  .dayFive .aquaBackground {
+    padding: 3% 0;
+  }
+  .rewardsContainer {
+    font-size: 125%;
+  }
+  .bgDayTwo {
+    background-image: url("pages-QulRewardsDesktop-4-bg-2560w.jpg");
+  }
+  .bgDayFour {
+    background-image: url("pages-QulRewardsDesktop-5-bg-2560w.jpg");
+  }
+  .item-a,
+  .item-b {
+    padding-left: 8vw;
+  }
+  .chapter {
+    font-size: 5rem;
+    padding-top: 3vh;
+    margin-bottom: 1%;
+    width: 75vw;
+  }
+  .intro .chapter {
+    margin-bottom: 5%;
+  }
+  .daySix .chapter {
+    display: revert;
+  }
+  .dayOne .chapter {
+    margin-bottom: 3%;
+  }
+  .divider {
+    display: revert;
+  }
+  .dayOne .copy {
+    display: grid;
+    grid-template-columns: 40% 5% 54%;
+    width: 100%;
+    grid-row-gap: 20px;
+    padding: 0 5% 5% 5%;
+  }
+  .dayOne .desktop-left {
+    padding: 15% 2% 0 0;
+  }
+  .dayThree .descriptive {
+    font-size: 150%;
+    margin-bottom: 2px;
+  }
+  .dayTwo .copy,
+  .dayFour .copy {
+    display: grid;
+    grid-template-columns: 45% 50%;
+    width: 100%;
+    grid-column-gap: 5%;
+    padding: 2% 4% 2% 4%;
+  }
+  .dayTwo .desktop-far-right,
+  .dayFour .desktop-far-right {
+    border-left: 4px double rgb(114, 206, 155);
+    padding-left: 10%;
+  }
+  .dayTwo .title,
+  .dayThree .title,
+  .dayFour .copy .title {
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  .dayFour .title {
+    text-align: left;
+  }
+  .qpons {
+    position: absolute;
+    bottom: 5%;
+    text-align: center;
+    width: 42%;
+  }
+  .dayThree .copy,
+  .dayFour .desktop-far-right,
+  .dayFive .copy {
+    text-align: center;
+  }
+  .dayThree .dsp {
+    margin-bottom: 5%;
+  }
+  .dayThree .roundedAquaOutline {
+    font-size: 150%;
+    font-weight: bold;
+  }
+  .dayFour .desktop-far-right {
+    padding-bottom: 3%;
+  }
+  .dayFour .smallText {
+    text-align: left;
+    font-size: 88%;
+  }
+  .dayFour .disclaimerText {
+    font-size: 70%;
+  }
+  .aquaBackground {
+    font-size: 159%;
+  }
+  .wholesaleSection {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+    text-align: center;
+    margin: 1% 0;
+  }
+  .wholesaleSection .medAqua {
+    font-size: 150%;
+  }
+  .socialIcons {
+    max-width: 15vw;
+    margin-top: 50vh;
+    margin-right: 30px;
+  }
+  .socialIcon {
+    height: 70px;
+    width: 70px;
+  }
+  .socialText {
+    font-size: 1.8rem;
+  }
+  .wholesaleSection p.descriptive,
+  .dayFive .descriptive {
+    font-size: 100%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .rewardsContainer {
+    font-size: 150%;
+  }
+  .dayTwo .title,
+  .dayThree .title {
+    font-size: 3rem;
+  }
+  .dayOne .title,
+  .number {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .rewardsContainer {
+    font-size: 175%;
+  }
+  .desktop-left {
+    font-size: 3.3rem;
+  }
+  .desktop-far-right {
+    font-size: 3.3rem;
+  }
+  .chapter {
+    font-size: 6rem;
+  }
+  .dayTwo .title,
+  .dayThree .title {
+    font-size: 4rem;
+  }
+  .dayTwo .copy,
+  .dayFour .copy {
+    padding: 2% 10% 2% 10%;
+  }
+  .dayFour .copy .title {
+    font-size: unset;
+  }
+  .desktop-far-right .title,
+  .number {
+    font-size: 4rem;
+  }
+  .rewardsRow {
+    margin-bottom: 3%;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .rewardsContainer {
+    font-size: 225%;
+  }
+  .dayOne .desktop-left {
+    padding-left: 10%;
+    font-size: 4rem;
+  }
+  .desktop-far-right .title {
+    font-size: 4.5rem;
+  }
+  .dayTwo .title,
+  .dayThree .title {
+    font-size: 5.5rem;
+  }
+  .dayFour .copy .title {
+    font-size: 140%;
+  }
+  .congrats {
+    width: 100vw;
+  }
+}
+@media screen and (min-width: 3840px) {
+  .rewardsContainer,
+  .chapter,
+  .intro .chapter {
+    font-size: 325%;
+  }
+  .dayOne .desktop-left {
+    padding-left: 10%;
+    font-size: 6rem;
+  }
+  .item-a,
+  .item-b,
+  .copy .smallText,
+  .copy .centeredText,
+  .copy .centeredList,  
+  .copy .roundedAquaOutline,
+  .copy p.medGreen
+  {
+    font-size: 150%;
+  }
+  .dayOne .copy p.medGreen {
+    font-size: unset;
+  }
+  .copy .disclaimerText {
+    font-size: 125%;
+  }
+  .desktop-far-right .title,
+  .number {
+    font-size: 6.5rem;
+  }
+  .dayTwo .title,
+  .dayThree .title {
+    font-size: 8rem;
+  }
+  .dayFour .copy .title {
+    font-size: 240%;
+  }
+}

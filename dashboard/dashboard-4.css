@@ -1,0 +1,392 @@
+.qulContainer {
+  padding-top: 2%;
+}
+/* this sets the rows to equal height but doesn't seem to be working */
+
+/* .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.row > [class*='col-'] .cardBody {
+  display: flex;
+ flex-direction: column; 
+} */
+/* maybe it would if I removed all of the extra divs inside the columns? */
+.thumbnail {
+  text-align: center;
+  border-radius: 15px;
+}
+.cardTitle {
+  color: #163029;
+  font-family: "futura-pt", sans-serif;
+  font-size: large;
+  margin: initial;
+  margin-bottom: 10px;
+}
+.normalText {
+  font-size: initial;
+}
+.firstGroup .thumbnail {
+  background-color: #e6edea;
+  letter-spacing: 0.04em;
+}
+.firstGroup .cardBody {
+  font-family: "josefin-sans", sans-serif;
+  font-size: x-large;
+  color: #71c497;
+  margin: inital;
+}
+.firstGroup,
+.secondGroup {
+  /* display: flex;
+  flex-wrap: wrap; 
+  min-height: 25%; */
+}
+.secondGroup .thumbnail {
+  background-color: #a2c1be;
+  letter-spacing: 0.04em;
+}
+.qualifiedPointsTracker .barTitle {
+  text-align: left;
+  margin: 10px 0 2px 0;
+}
+.thirdGroup .thumbnail {
+  background-color: #3d978d;
+  letter-spacing: 0.04em;
+}
+.thirdGroup .leaderboard,
+.contestDetails {
+  background-color: #d0e0db;
+}
+.contestDetails {
+  width: 100%;
+  padding: 5px 0;
+  position: fixed;
+  bottom: 52px;
+  font-size: large;
+}
+#donutChart .c3-chart-arcs-title {
+  font-size: 2em;
+  color: white;
+}
+
+.subheadingRight {
+  color: #91e18f;
+  /* text-shadow: 1px 0px 0px white, 0px 1px 0px white, -1px 0px 0px white, 0px -1px 0px white; */
+  font-weight: bold;
+}
+.subheadingRight .fa.fa-circle {
+  color: inherit;
+}
+.subheadingLeft .fa.fa-circle {
+  color: inherit;
+}
+.subheadingLeft {
+  color: #4a93f5;
+  text-shadow: 1px 0px 0px white, 0px 1px 0px white, -1px 0px 0px white, 0px -1px 0px white;
+  font-weight: bold;
+}
+.salesPoints,
+.commissions {
+  /* display: grid;
+  grid-template-columns: 30% 70%; */
+}
+.left {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 30px 30px;
+  margin-top: -10vh;
+}
+
+/* chartist half donut styles */
+.col3,
+.col1 {
+  grid-row: 2 / span 1;
+  font-size: large;
+  font-weight: bold;
+}
+.col4,
+.col2 {
+  grid-row: 1 / span 1;
+  font-size: large;
+  font-weight: bold;
+}
+
+.col1.row1 {
+  color: #4a93f5;
+}
+.col1.row2 {
+  color: #6e9edc;
+}
+.col1.row3 {
+  color: #88a1c2;
+}
+.col3.row1 {
+  color: #25baa9;
+}
+.col3.row2 {
+  color: #40a095;
+}
+.col3.row3 {
+  color: #518781;
+}
+.commissionsChart .ct-series-a .ct-slice-donut-solid {
+  /* fill of the pie slieces YELLOW ORANGE GREEN*/
+  fill: #25baa9;
+}
+.commissionsChart .ct-series-b .ct-slice-donut-solid {
+  /* fill of the pie slieces YELLOW ORANGE GREEN*/
+  fill: #40a095;
+}
+.commissionsChart .ct-series-c .ct-slice-donut-solid {
+  /* fill of the pie slieces YELLOW ORANGE GREEN*/
+  fill: #518781;
+}
+.salesPoints .ct-series-a .ct-slice-donut-solid {
+  /* fill of the pie slieces USE BLUE/GREEN*/
+  fill: #4a93f5;
+}
+.salesPoints .ct-series-b .ct-slice-donut-solid {
+  /* fill of the pie slieces USE BLUE/GREEN*/
+  fill: #6e9edc;
+}
+.salesPoints .ct-series-c .ct-slice-donut-solid {
+  /* fill of the pie slieces USE BLUE/GREEN*/
+  fill: #88a1c2;
+}
+.qualifiedPointsGoal {
+  font-size: x-large;
+  font-weight: bold;
+  margin-top: -10px;
+}
+.dspPlusIsp {
+  font-size: xx-large;
+  font-weight: bold;
+  color: #4a93f5;
+}
+
+.balanceText {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: -10px;
+}
+.balanceLeft.top,
+.balanceRight.top {
+  font-size: large;
+  font-weight: bold;
+}
+.balanceRight.bottom,
+.balanceLeft.bottom {
+  font-size: x-large;
+  font-weight: bold;
+}
+.balanceRight.bottom {
+  color: #e6edea;
+}
+.balanceLeft.bottom {
+  color: #3d978d;
+}
+.yourInfluence {
+  display: grid;
+  grid-template-columns: 50% 1fr 1fr;
+  font-size: 1.2em;
+}
+.yourInfluence h4 {
+  margin-bottom: 10px;
+}
+.yourInfluence span {
+  margin-left: 10%;
+}
+.influenceTiers {
+  font-weight: bold;
+}
+.directInfluenceLegend,
+.teamInfluenceLegend {
+  /* grid-row: 1 / span 1;
+  margin-top: -20px; encroach on the space of the chart bc of its padding */
+}
+.directInfluenceLegend {
+  /* grid-column: 2 / span 1; */
+}
+.teamInfluenceLegend {
+  /* grid-column: 2 / span 1; */
+}
+.directInfluenceLegend .free {
+  color: #91e18f;
+}
+.teamInfluenceLegend .free {
+  color: #b3eda6;
+}
+.directInfluenceLegend .active {
+  color: #4a93f5;
+}
+.teamInfluenceLegend .active {
+  color: #4ab4f5;
+}
+.directInfluenceLegend .influencer {
+  color: #293947;
+}
+.teamInfluenceLegend .influencer {
+  color: #9a9a9a;
+}
+.directInfluenceLegend .qualifiedInfluencer {
+  color: #00d3ba;
+}
+.teamInfluenceLegend .qualifiedInfluencer {
+  color: #21ffe5;
+}
+.referralLabel {
+  color: #162f29;
+}
+.referralDropdown,
+.referralDropdown option {
+  color: #162f29;
+}
+.referralContainer label,
+.referralContainer select {
+  display: none;
+}
+.headerOptions {
+  display: inline-block;
+}
+/* xflow widget */
+.well {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+.header-text {
+  display: none !important;
+}
+.xflow-widget .btn.btn-primary.btn-xs,
+.reports_52_jqGrid_report_toppager,
+.ui-pg-table > tbody,
+span.ui-paging-info,
+.ui-search-toolbar {
+  display: none !important;
+}
+.leaderboard .cardBody {
+  /* The resizing here is acting weird, I think because the widget is inserting two new bootstrap column elements into the body. Setting individually seems to be the only thing that works here. */
+  min-height: 65vh;
+  margin-top: -5vh;
+}
+@media screen and (min-width: 480px) {
+  .referralContainer select {
+    display: revert;
+  }
+  .col3,
+  .col1 {
+    font-size: 1.5em;
+  }
+  .leaderboard .cardBody {
+    min-height: 41vh;
+  }
+}
+@media screen and (min-width: 768px) {
+  .subheadingLeft,
+  .subheadingRight {
+    font-size: 1.8em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .qaulifiedPointsGauge .cardBody {
+    min-height: 27vh;
+  }
+  .leaderboard .cardBody {
+    min-height: 25vh;
+  }
+  .referralContainer label {
+    display: revert;
+  }
+  .leaderboard .cardBody {
+    margin-top: -3vh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container.qulContainer {
+    width: 95vw;
+  }
+  .firstGroup .cardBody {
+    min-height: 5vh;
+    font-size: 2.7em;
+  }
+right: 1thm 0n !important;
+  .secondGroup .cardBody {
+    height: 20vh;
+  }
+  .col3,
+  .col1 {
+    font-size: 1.1em;
+  }
+  .currentBalanceChart {
+    height: calc(18vh - 2vh);
+  }
+  .balanceRight.bottom, .balanceLeft.bottom {
+    font-size: large;
+  }
+  .  left {
+    margin-top: -10vh;
+  }
+  .thirdGroup .cardBody {
+    min-height: 36vh;
+  }
+  .leaderboard .cardBody {
+    min-height: 41vh;
+  }
+  .subheadingLeft,
+  .subheadingRight {
+    font-size: 1.4em;
+  }
+  .progress {
+    margin-bottom: 10px;
+  }
+  .xflow-widget {
+    margin-top: -10%;
+  } 
+  .qaulifiedPointsGauge .cardBody {
+    min-height: revert;
+  }
+}
+@media screen and (min-width: 1600px) {
+}
+@media screen and (min-width: 1920px) {
+  .container.qulContainer {
+    width: 85vw;
+  }
+  .firstGroup .cardBody {
+    min-height: 5vh;
+    font-size: 2.7em;
+  }
+
+  .secondGroup .cardBody {
+    height: 20vh;
+  }
+  .currentBalanceChart {
+    height: calc(18vh - 2vh);
+  }
+  .left {
+    /* this is because the half donut is actually just only drawing half of the circle, but reserving the space for the whole circle below it */
+    margin-top: -10vh;
+  }
+  .thirdGroup .cardBody {
+    min-height: 36vh;
+  }
+  .leaderboard .cardBody {
+    min-height: 41vh;
+  }
+
+  .progress {
+    margin-bottom: 10px;
+  }
+  .currentBalanceChart,
+  .commissionsChart {
+    /* setting this is required to get the pie to size correctly */
+    /* height: 16vh;  */
+  }
+  .xflow-widget {
+    margin-top: -10%;
+  }
+}

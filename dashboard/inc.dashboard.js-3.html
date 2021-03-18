@@ -1,0 +1,199 @@
+<script>
+  // CHARTS - they do the math for you on input!
+
+  // Donut chart
+  var chart = c3.generate({
+    bindto: "#donutChart",
+    data: {
+      columns: [
+        [`ISP`, ~isp~],
+        [`DSP`, ~dsp~],
+      ],
+      type: "donut",
+      colors: {
+        DSP: "#91e18f",
+        ISP: "#4a93f5",
+      },
+    },
+    legend: {
+      show: false,
+    },
+    //disable interactive elements
+    interaction: {
+      enabled: false,
+    },
+    donut: {
+      title: `TOTAL: ${dspPlusIsp}`,
+      label: {
+        show: false,
+        format: function (value, ratio, id) {
+          return value;
+        }
+      }
+    },
+  });
+
+  var currentBalance = c3.generate({
+    bindto: '#currentBalanceChart',
+    data: {
+      // iris data from R
+      columns: [
+        ['QC', ~currency_4_balance~],
+        ['USD', ~currency_1_balance~],
+      ],
+      type: 'pie',
+      colors: {
+        QC: "#3d978d",
+        USD: "#71c497",
+      },
+    },
+    legend: {
+      show: false,
+    },
+    interaction: {
+      enabled: false,
+    },
+    pie: {
+      label: {
+        show: false,
+        format: function (value, ratio, id) {
+          return value;
+        }
+      }
+    },
+
+  });
+  // There is a way to resize the chart if sizing keeps being an issue
+  // https://stackoverflow.com/questions/26003591/c3-chart-sizing-is-too-big-when-initially-loaded
+
+  // BAR CHART
+  var yourInfluenceBar = c3.generate({
+    size: {
+      height: 225
+    },
+    padding: {
+      left: 25,
+      right: 25
+    },
+    bindto: "#directInfluenceChart",
+    data: {
+      columns: [
+        [`Direct Free`, directFreeUser],
+        [`Team Free`, freeUser],
+        [`Direct Active`, directActiveUser],
+        [`Team Active`, activeUser],
+        [`Direct Influencer`, directInfluencer],
+        [`Team Influencer`, influencer],
+        [`Direct Qualified Influencer`, directQualifiedInfluencer],
+        [`Team Qualified Influencer`, qualifiedInfluencer],
+      ],
+      groups: [
+        ["Direct Free", "Team Free"],
+        ["Direct Active", "Team Active"],
+        ["Direct Influencer", "Team Influencer"],
+        ["Direct Qualified Influencer", "Team Qualified Influencer"],
+      ],
+      type: "bar",
+      colors: {
+        "Direct Free": "#91e18f",
+        "Team Free": "#b3eda6",
+        "Direct Active": "#4a93f5",
+        "Team Active": "#4ab4f5",
+        "Direct Influencer": "#293947",
+        "Team Influencer": "#9a9a9a",
+        "Direct Qualified Influencer": "#00d3ba",
+        "Team Qualified Influencer": "#21ffe5",
+      },
+      interaction: {
+        enabled: false,
+      },
+    },
+    legend: {
+      hide: true,
+      // position: "bottom",
+      //or hide: 'data1'
+      //or hide: ['data1', 'data2']
+    },
+    // hide the y axis;
+    axis: {
+      y: {
+        show: false,
+      },
+    },
+    title: {
+      text: "Direct vs. Team Influence",
+    },
+    tooltip: {
+      show: false
+    }
+  });
+
+
+  // Gauge
+  var opts = {
+    angle: -0.11, // The span of the gauge arc
+    lineWidth: 0.29, // The line thickness
+    radiusScale: 1, // Relative radius
+    pointer: {
+      length: 0.32, // // Relative to gauge radius
+      strokeWidth: 0.073, // The thickness
+      color: '#000000' // Fill color
+    },
+    limitMax: false,     // If false, max value increases automatically if value > maxValue
+    limitMin: false,     // If true, the min value of the gauge will be fixed
+    colorStart: '#6FADCF',   // Colors
+    colorStop: '#8FC0DA',    // just experiment with them
+    strokeColor: '#E0E0E0',  // to see which ones work best for you
+    generateGradient: true,
+    highDpiSupport: true,     // High resolution support
+    // renderTicks is Optional
+    renderTicks: {
+      divisions: 7,
+      divWidth: 1.2,
+      divLength: 0.68,
+      divColor: '#333333',
+      subDivisions: 2,
+      subLength: 0.5,
+      subWidth: 0.7,
+      subColor: '#666666'
+    }
+  };
+  var target = document.getElementById('qualifiedPointsChart'); // your canvas element
+  var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
+  gauge.maxValue = 5000; // set max gauge value
+  gauge.setMinValue(0);  // Prefer setter over gauge.minValue = 0
+  gauge.animationSpeed = 34; // set animation speed (32 is default value)
+  gauge.set(dspPlusIsp); // set actual value
+
+  // HALF Donut (CHARTIST)
+  new Chartist.Pie('.commissionsChart', {
+    series: [dscPercent, iscPercent, oscPercent]
+  }, {
+    donut: true,
+    donutWidth: 60,
+    donutSolid: true,
+    startAngle: 270,
+    total: 200,
+    showLabel: false
+  });
+
+  new Chartist.Pie('.salesPointsChart', {
+    series: [dspPercent, ispPercent, ospPercent]
+  }, {
+    donut: true,
+    donutWidth: 60,
+    donutSolid: true,
+    startAngle: 270,
+    total: 200,
+    showLabel: false
+  });
+
+  // This needs to be here so it triggers after DOM is rendered 
+  let pointsTracker = document.querySelector('.dspPlusIsp');
+  // insert the total into the div
+  pointsTracker.textContent = `${dspPlusIsp}`;
+
+  let widget = document.getElementById(reports_52_jqGrid_report_width);
+  widget.textContent = "";
+  // currentBalance.resize();
+</script>
