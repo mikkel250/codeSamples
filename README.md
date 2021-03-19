@@ -59,23 +59,29 @@ Create a responsive dashboard in collaboration with various stakeholders and a v
 
 ### How I feel it represents my abilities
 - End product is a result of ability to quickly learn and implement new technology, and work with multiple stakeholders with fluid requirements.
-- While the code itself isn't all that technically impressive, the process to create this page is a demonstration of soft skills: collaboration, communication, and adaptability.
+- While the code itself necessarily technically impressive, the process to create this page is a demonstration of soft skills: collaboration, communication, and adaptability.
 
 
 
 ## Rewards
 ### The Task
-
+Create a pixel-perfect page based on the mockup from the creative team, using parallax scrolling, that works on all devices, on a short timeline (page launched in under 48 hours).
 
 ### Considerations
-
+- Parallax scrolling only works on desktop devices due to the technical limitations of mobile browsers.
+- Timeline was very tight for delivery of pixel-perfect page, including testing and implementing an unknown library, with lots of content formatting required, that works on every broswer and screen size.
 
 ### Solution
-
+- Researched the problem (mobile browsers only periodically check for scroll events to save battery life) and possible solutions. 
+- According to what I found, the best solution in this case was to use a library rather than try to implement my own solution from scratch. 
+- Found a library, built and tested a quick prototype, presented to the creative team, and then proceeded to build the pages on approval.
+- In order to meet the timeline, proposed a strategy that would allow a Minimum Viable Product (MVP) to go up first, with the final page replacing it once tested and approved. To get this done, images of the text portions from the mockup were placed on the page for the MVP, which were then replaced by HTML in the final version once fully tested and ready.
 
 ### Why I'm proud of it
-
+- Delivered working final product with which everyone was happy, that met the requirements, that works on all browsers despite limitations, and looks good!
 
 ### How I feel it represents my abilities
+- Demonstrates ability to work with creative team to create pixel-perfect webpages from a mockup.
+- Demonstrates ability to analyze a problem, research, and come up with a solution under a tight deadline.
 
-
+The final page can be viewed at https://qulcbd.com/pages/rewards
