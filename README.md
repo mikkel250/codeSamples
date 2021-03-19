@@ -2,6 +2,7 @@
 
 Each directory contains a different sample. Included here for easy reference are the description, why I'm proud of it, and how I feel it represents my abilities. 
 
+
 ## addSlides
 ### The Task
   - Add new slides to an existing slider to advertise sales during specific time windows, e.g. Memorial Day weekend. 
@@ -22,7 +23,6 @@ Each directory contains a different sample. Included here for easy reference are
   - To break the string up, store in a data structure. 
   - Objects (lines 1-35) are a good choice for data structure in this case, because the keys can used to identify which portions of the string should be bold (line 59). 
   - A nested structure can be used to separate the data, and loops used to iterate over each level to create each slide (see lines 51 and 55).
-
 
 ### Why I'm proud of it
 Clean and concise solution to a challenge that ended up being more complex than expected that uses the tools available. 
@@ -60,7 +60,6 @@ Create a responsive dashboard in collaboration with various stakeholders and a v
 ### How I feel it represents my abilities
 - End product is a result of ability to quickly learn and implement new technology, and work with multiple stakeholders with fluid requirements.
 - While the code itself necessarily technically impressive, the process to create this page is a demonstration of soft skills: collaboration, communication, and adaptability.
-
 
 
 ## Rewards
