@@ -55,11 +55,11 @@ Create a responsive dashboard in collaboration with various stakeholders and a v
 - Rather than creating pixel perfect, finished pages every time, I would prototype each iteration and meet with stakeholders to view and discuss before arriving on the final UI, design, and functionality. 
 
 ### Why I'm proud of it
-- Delivered working final product with which everyone was happy, that met the requirements.
+- Delivered working final product with which everyone was happy, that met the requirements, and incorporating unfamiliar technology.
 
 ### How I feel it represents my abilities
 - End product is a result of ability to quickly learn and implement new technology, and work with multiple stakeholders with fluid requirements.
-- While the code itself necessarily technically impressive, the process to create this page is a demonstration of soft skills: collaboration, communication, and adaptability.
+- While the code itself isn't necessarily technically impressive, the process to create this page is a demonstration of soft skills: collaboration, communication, and adaptability.
 
 
 ## Rewards
@@ -77,10 +77,13 @@ Create a pixel-perfect page based on the mockup from the creative team, using pa
 - In order to meet the timeline, proposed a strategy that would allow a Minimum Viable Product (MVP) to go up first, with the final page replacing it once tested and approved. To get this done, images of the text portions from the mockup were placed on the page for the MVP, which were then replaced by HTML in the final version once fully tested and ready.
 
 ### Why I'm proud of it
+- Incorporated a parallax library (`page.rewards.Envex.liquid` lines 247-251), video (`page.rewards.Envex.liquid` lines 11-13), responsive images, HTML, CSS, and Shopify's Liquid (`page.rewards.Envex.liquid` line 33) on the same page.
 - Delivered working final product with which everyone was happy, that met the requirements, that works on all browsers despite limitations, and looks good!
 
 ### How I feel it represents my abilities
+- Good demonstration of frontend abilities
 - Demonstrates ability to work with creative team to create pixel-perfect webpages from a mockup.
 - Demonstrates ability to analyze a problem, research, and come up with a solution under a tight deadline.
+
 
 The final page can be viewed at https://qulcbd.com/pages/rewards
